@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<!--
+-->
+
+<html>
+<head>
+    <title>iPad Slideshow with jCycle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssbase/base-min.css">
+	<link rel="stylesheet" media="screen" type="text/css" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
+
+</head>
+<body>
+	<div id="header">
+		<p><a href="#">Back to Design Shack</a></p>
+	</div>
+	<div id="container">
+		<div id="slider">
+			<img src="img/slide-a.jpg" alt="" >
+			<img src="img/slide-b.jpg" alt="" >
+			<img src="img/slide-c.jpg" alt="" >
+			<img src="img/slide-d.jpg" alt="" >
+			<img src="img/slide-e.jpg" alt="" >
+		</div>
+	</div>
+	<script>
+		$('#slider').cycle({
+			fx: 'scrollLeft',
+			timeout: 4000,
+			speed: 500,
+			pause: 1
+		});
+	</script>
+</body>
+</html>

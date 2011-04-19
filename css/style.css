@@ -1,0 +1,16 @@
+body {
+	background-color: #1b1a1b;
+}
+#container {
+	width: 883px;
+	height: 535px;
+	background: url(../img/ipad.jpg);
+	margin: 30px auto;
+	overflow: hidden;
+}
+#slider {
+	width: 460px;
+	height: 345px;
+	margin-left: 212px;
+	margin-top: 79px;
+}
