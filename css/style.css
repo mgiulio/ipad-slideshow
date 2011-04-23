@@ -1,16 +1,55 @@
 body {
 	background-color: #1b1a1b;
 }
-#container {
+#frame {
 	width: 883px;
 	height: 535px;
 	background: url(../img/ipad.jpg);
 	margin: 30px auto;
 	overflow: hidden;
 }
-#slider {
+#screen {
 	width: 460px;
 	height: 345px;
 	margin-left: 212px;
 	margin-top: 79px;
+	/*overflow: hidden; */
+	position: relative;
 }
+#slides {
+	margin: 0;
+	padding: 0;
+	height: 345px;
+}
+#screen .nav_arrow {
+	width: 30px;
+	height: 34px;
+	background: url(../img/arrows.png) no-repeat;
+	display: none;
+	position: absolute;
+	top: 150px;
+	z-index: 9999;
+}
+#screen #prev {
+	/* background-position: ; */
+	left: 5px;
+}
+#screen #next {
+	background-position: -30px 0;
+	right: 5px;
+}
+#pager {
+	width: 200px;
+	margin: 0 auto;
+	/*border: 1px solid red;*/
+}
+#pager a { 
+	border: 1px solid #ccc; background: #fc0; text-decoration: none; margin: 0 5px; padding: 3px 5px;
+}
+#pager a.activeSlide { 
+	background: #ea0
+}
+#pager a:focus { 
+	outline: none;
+}
+
