@@ -46,7 +46,7 @@
 		$('#pager').hover(
 			function() {
 				$('#slides')
-					.cycle('pause')
+					//.cycle('pause')
 					.parent()
 					.find('.nav_arrow')
 					.show()
@@ -54,7 +54,7 @@
 			},
 			function() {
 				$('#slides')
-					.cycle('resume')
+					//.cycle('resume')
 					.parent()
 					.find('.nav_arrow')
 					.hide()
@@ -65,7 +65,8 @@
 			fx: 'scrollHorz',
 			timeout: 4000,
 			speed: 500,
-			pause: 1,
+			pause: true,
+			pauseOnPagerHover: true,
 			prev: '#prev',
 			next: '#next',
 			pager: '#pager'
