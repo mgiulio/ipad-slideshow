@@ -46,11 +46,15 @@ body {
 }
 #pager {
 	width: 200px;
-	margin: 0 auto;
-	/*border: 1px solid red;*/
+	margin: 10px auto 0 auto;
+	text-align: center;
 }
 #pager a { 
-	border: 1px solid #ccc; background: #fc0; text-decoration: none; margin: 0 5px; padding: 3px 5px;
+	border: 1px solid #ccc; 
+	background: #fc0; 
+	text-decoration: none; 
+	margin: 0 5px; 
+	padding: 3px 5px;
 }
 #pager a.activeSlide { 
 	background: #ea0
@@ -58,4 +62,3 @@ body {
 #pager a:focus { 
 	outline: none;
 }
-
