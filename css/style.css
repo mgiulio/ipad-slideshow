@@ -2,29 +2,31 @@ body {
 	background-color: #1b1a1b;
 }
 #frame {
-	width: 883px;
-	height: 535px;
-	background: url(../img/ipad.jpg);
+	width: 580px;
+	height: 520px;
+	background: url(../img/frame.jpg) no-repeat;
 	margin: 30px auto;
 	overflow: hidden;
+	padding: 0;
 }
 #screen {
-	width: 460px;
-	height: 345px;
-	margin-left: 212px;
-	margin-top: 79px;
+	width: 466px;
+	height: 349px;
+	margin-left: 57px;
+	margin-top: 52px;
 	/*overflow: hidden; */
 	position: relative;
+	padding: 0;
 }
 #slides {
 	margin: 0;
 	padding: 0;
-	height: 345px;
+	height: 349px;
 }
 #screen .nav_arrow {
-	width: 30px;
-	height: 34px;
-	background: url(../img/arrows.png) no-repeat;
+	width: 60px;
+	height: 60px;
+	/*background: url(../img/arrows.png) no-repeat;*/
 	display: none;
 	position: absolute;
 	top: 150px;
@@ -33,11 +35,32 @@ body {
 #screen #prev {
 	/* background-position: ; */
 	left: 5px;
+	background: url(../img/prev.png);
+}
+#screen #prev a {
+	display: block;
+	margin: 0;
+	height: 60px;
+	text-indent: -9999px;
+}
+#screen #prev a:focus {
+	outline: none;
 }
 #screen #next {
-	background-position: -30px 0;
+	/*background-position: -30px 0;*/
 	right: 5px;
+	background: url(../img/next.png);
 }
+#screen #next a {
+	display: block;
+	margin: 0;
+	height: 60px;
+	text-indent: -9999px;
+}
+#screen #next a:focus {
+	outline: none;
+}
+
 #pager {
 	width: 200px;
 	margin: 0 auto;

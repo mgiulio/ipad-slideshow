@@ -21,18 +21,18 @@
 	<div id="frame">
 		<div id="screen">
 			<div id="slides">
-				<img src="img/slide-a.jpg" alt="" >
-				<img src="img/slide-b.jpg" alt="" >
-				<img src="img/slide-c.jpg" alt="" >
-				<img src="img/slide-d.jpg" alt="" >
-				<img src="img/slide-e.jpg" alt="" >
+				<a href="http://www.scrnshots.com/users/giuliom/screenshots/282517"><img src="img/slide-1.jpg" alt="" ></a>
+				<a href="http://www.scrnshots.com/users/giuliom/screenshots/283489"><img src="img/slide-2.jpg" alt="" ></a>
+				<a href="http://www.scrnshots.com/users/giuliom/screenshots/283317"><img src="img/slide-3.jpg" alt=""></a>
+				<a href="http://www.scrnshots.com/users/giuliom/screenshots/285898"><img src="img/slide-4.jpg" alt="" ></a>
+				<a href="http://www.scrnshots.com/users/giuliom/screenshots/284145"><img src="img/slide-5.jpg" alt="" ></a>
 			</div>
 		</div>
 		<div id="pager"></div>
 	</div>
 	<script>
 		$('#screen')
-			.append('<div class="nav_arrow" id="prev"></div><div class="nav_arrow" id="next"></div>')
+			.append('<div class="nav_arrow" id="prev"><a href="#">prev</a></div><div class="nav_arrow" id="next"><a href="#">next</a></div>')
 			.hover(function() {
 				console.log('hover in');
 				$(this).find('.nav_arrow').show();
