@@ -33,16 +33,18 @@
 	<script>
 		$('#screen')
 			.append('<a class="nav_arrow" id="prev" href="#">prev</a><a class="nav_arrow" id="next" href="#">next</a></div>')
-			.hover(function() {
-				console.log('hover in');
+			.mouseover(function() {
+				$('#slides').cycle('pause');
 				$(this).find('.nav_arrow').show();
-			},
-			function() {
-				console.log('hover out');
+			})
+			.mouseout(function() {
 				$(this).find('.nav_arrow').hide();
-			}
-			)
-		;
+				$('#slides').cycle('resume');
+			});
+			/*.hover(
+				function() { $(this).find('.nav_arrow').show(); },
+				function() { $(this).find('.nav_arrow').hide(); }
+			);*/
 		$('#pager').hover(
 			function() {
 				$('#slides')
@@ -65,7 +67,7 @@
 			fx: 'scrollHorz',
 			timeout: 4000,
 			speed: 500,
-			pause: true,
+			//pause: true,
 			pauseOnPagerHover: true,
 			prev: '#prev',
 			next: '#next',
