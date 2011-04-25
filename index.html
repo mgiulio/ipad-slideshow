@@ -1,76 +1,28 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
-
 <html>
 <head>
-    <title>iPad Slideshow with jCycle</title>
+    <title>iPad Slideshow with Cycle</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssbase/base-min.css">
 	<link rel="stylesheet" media="screen" type="text/css" href="css/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 	<script src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
-
+	<script src="js/script.js"></script>
 </head>
 <body>
-	<div id="header">
-		<p><a href="#">Back to Design Shack</a></p>
-	</div>
 	<div id="frame">
 		<div id="screen">
 			<div id="slides">
-				<a href="http://www.scrnshots.com/users/giuliom/screenshots/282517"><img src="img/slide-1.jpg" alt="" ></a>
-				<a href="http://www.scrnshots.com/users/giuliom/screenshots/283489"><img src="img/slide-2.jpg" alt="" ></a>
-				<a href="http://www.scrnshots.com/users/giuliom/screenshots/283317"><img src="img/slide-3.jpg" alt=""></a>
-				<a href="http://www.scrnshots.com/users/giuliom/screenshots/285898"><img src="img/slide-4.jpg" alt="" ></a>
-				<a href="http://www.scrnshots.com/users/giuliom/screenshots/284145"><img src="img/slide-5.jpg" alt="" ></a>
+				<a href="http://www.scrnshots.com/users/giuliom/screenshots/282517"><img src="img/slide-1.jpg"></a>
+				<a href="http://www.scrnshots.com/users/giuliom/screenshots/283489"><img src="img/slide-2.jpg"></a>
+				<a href="http://www.scrnshots.com/users/giuliom/screenshots/283317"><img src="img/slide-3.jpg"></a>
+				<a href="http://www.scrnshots.com/users/giuliom/screenshots/285898"><img src="img/slide-4.jpg"></a>
+				<a href="http://www.scrnshots.com/users/giuliom/screenshots/284145"><img src="img/slide-5.jpg"></a>
 			</div>
 		</div>
 		<div id="pager"></div>
 	</div>
-	<script>
-		$('#screen')
-			.append('<a class="nav_arrow" id="prev" href="#">prev</a><a class="nav_arrow" id="next" href="#">next</a></div>')
-			.mouseover(function() {
-				$('#slides').cycle('pause');
-				$(this).find('.nav_arrow').show();
-			})
-			.mouseout(function() {
-				$(this).find('.nav_arrow').hide();
-				$('#slides').cycle('resume');
-			});
-			/*.hover(
-				function() { $(this).find('.nav_arrow').show(); },
-				function() { $(this).find('.nav_arrow').hide(); }
-			);*/
-		$('#pager').hover(
-			function() {
-				$('#slides')
-					//.cycle('pause')
-					.parent()
-					.find('.nav_arrow')
-					.show()
-				;
-			},
-			function() {
-				$('#slides')
-					//.cycle('resume')
-					.parent()
-					.find('.nav_arrow')
-					.hide()
-				;
-			}
-		);
-		$('#slides').cycle({
-			fx: 'scrollHorz',
-			timeout: 4000,
-			speed: 500,
-			//pause: true,
-			pauseOnPagerHover: true,
-			prev: '#prev',
-			next: '#next',
-			pager: '#pager'
-		});
-	</script>
 </body>
 </html>
