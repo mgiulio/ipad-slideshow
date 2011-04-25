@@ -32,7 +32,7 @@
 	</div>
 	<script>
 		$('#screen')
-			.append('<div class="nav_arrow" id="prev"><a href="#">prev</a></div><div class="nav_arrow" id="next"><a href="#">next</a></div>')
+			.append('<a class="nav_arrow" id="prev" href="#">prev</a><a class="nav_arrow" id="next" href="#">next</a></div>')
 			.hover(function() {
 				console.log('hover in');
 				$(this).find('.nav_arrow').show();
