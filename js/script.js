@@ -2,19 +2,23 @@ $(window).load(function() {
 	var
 		$slides = $('#slides'),
 		$frame = $('<div id="frame"></div>'),
+		$prev = $('<a class="nav_arrow" id="prev" href="#">prev</a>'),
+		$next = $('<a class="nav_arrow" id="next" href="#">next</a>'),
 		$screen = $('<div id="screen"></div>')
-			.append('<a class="nav_arrow" id="prev" href="#">prev</a><a class="nav_arrow" id="next" href="#">next</a></div>')
+			.append($prev, $next)
 			.mouseover(function() {
 				$slides.cycle('pause');
-				$(this).find('.nav_arrow').show();
+				$prev.show();
+				$next.show();
 			})
 			.mouseout(function() {
-				$(this).find('.nav_arrow').hide();
+				$prev.hide();
+				$next.hide();
 				$slides.cycle('resume');
 			}),
 		$pager = $('<div id="pager"></div>').hover(
-			function() { $slides.parent().find('.nav_arrow').show(); },
-			function() { $slides.parent().find('.nav_arrow').hide(); }
+			function() { $prev.show(); $next.show(); },
+			function() { $prev.hide(); $show.hide(); }
 		)
 	; 
 	

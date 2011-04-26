@@ -23,26 +23,24 @@ body {
 	padding: 0;
 	height: 349px;
 }
-#screen .nav_arrow {
+.nav_arrow {
 	width: 60px;
 	height: 60px;
-	/*background: url(../img/arrows.png) no-repeat;*/
-	display: none;
-	position: absolute;
+	position: absolute; /* We position them relative to the #screen */
 	top: 150px;
-	z-index: 9999;
+	z-index: 9999; /* We need this because Cycle use absolute positioning for the slides */
 	text-indent: -9999px;
-	outline: none; /* :focus? */
+	outline: none; /* To avoid ugly dotted rectangles */
+	background-repeat: no-repeat;
+	display: none; /* Not visible initially */
 }
-#screen #prev {
-	/* background-position: ; */
+#prev {
 	left: 5px;
-	background: url(../img/prev.png);
+	background-image: url(../img/prev.png);
 }
-#screen #next {
-	/*background-position: -30px 0;*/
+#next {
 	right: 5px;
-	background: url(../img/next.png);
+	background-image: url(../img/next.png);
 }
 #pager {
 	width: 200px;
@@ -51,13 +49,13 @@ body {
 }
 #pager a { 
 	border: 1px solid #ccc; 
-	background: #fc0; 
+	background-color: #fc0; 
 	text-decoration: none; 
 	margin: 0 5px; 
 	padding: 3px 5px;
 }
 #pager a.activeSlide { 
-	background: #ea0
+	background-color: #ea0
 }
 #pager a:focus { 
 	outline: none;
