@@ -1,11 +1,13 @@
 body {
 	background-color: #1b1a1b;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 #frame {
 	width: 580px;
 	height: 520px;
 	background: url(../img/frame.jpg) no-repeat;
-	margin: 30px auto;
+	margin: 0 auto;
 	overflow: hidden;
 	padding: 0;
 }
