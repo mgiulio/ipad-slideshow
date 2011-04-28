@@ -1,7 +1,5 @@
 body {
 	background-color: #1b1a1b;
-	padding-top: 30px;
-	padding-bottom: 30px;
 }
 #frame {
 	width: 580px;
@@ -61,4 +59,19 @@ body {
 }
 #pager a:focus { 
 	outline: none;
+}
+/* End of slideshow related CSS */
+#prjnotes a:link {
+	color: #0000ff;
+	text-decoration: none;
+}
+#prjnotes a:visited {
+	color: #ff00ff;
+	text-decoration: none;
+}
+#prjnotes a:hover {
+	text-decoration: underline;
+}
+#prjnotes a:active {
+	color: #ff0000;
 }
