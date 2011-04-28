@@ -18,7 +18,7 @@ $(window).load(function() {
 			}),
 		$pager = $('<div id="pager"></div>').hover(
 			function() { $prev.show(); $next.show(); },
-			function() { $prev.hide(); $show.hide(); }
+			function() { $prev.hide(); $next.hide(); }
 		)
 	; 
 	
