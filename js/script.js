@@ -6,19 +6,11 @@ $(window).load(function() {
 		$next = $('<a class="nav_arrow" id="next" href="#">next</a>'),
 		$screen = $('<div id="screen"></div>')
 			.append($prev, $next)
-			.mouseover(function() {
-				$slides.cycle('pause');
-				$prev.show();
-				$next.show();
-			})
-			.mouseout(function() {
-				$prev.hide();
-				$next.hide();
-				$slides.cycle('resume');
-			}),
+			.mouseover(function() { $slides.cycle('pause'); $prev.show(); $next.show(); })
+			.mouseout(function() { $prev.hide(); $next.hide(); $slides.cycle('resume'); }),
 		$pager = $('<div id="pager"></div>').hover(
-			function() { $prev.show(); $next.show(); },
-			function() { $prev.hide(); $next.hide(); }
+			function() { $slides.cycle('pause'); $prev.show(); $next.show(); },
+			function() { $prev.hide(); $next.hide(); $slides.cycle('resume'); }
 		)
 	; 
 	
@@ -30,7 +22,6 @@ $(window).load(function() {
 		fx: 'scrollHorz',
 		timeout: 4000,
 		speed: 500,
-		pauseOnPagerHover: true,
 		prev: '#prev',
 		next: '#next',
 		pager: '#pager'
