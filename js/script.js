@@ -8,8 +8,7 @@ $(window).load(function() {
 			.append($prev, $next)
 			.hover(function() { $slides.cycle('toggle'); $prev.toggle(); $next.toggle(); }),
 		$pager = $('<div id="pager"></div>').hover(
-			function() { $slides.cycle('pause'); $prev.show(); $next.show(); },
-			function() { $prev.hide(); $next.hide(); $slides.cycle('resume'); }
+			function() { $slides.cycle('toggle'); $prev.toggle(); $next.toggle(); }
 		)
 	; 
 	
