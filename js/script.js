@@ -6,10 +6,7 @@ $(window).load(function() {
 		$next = $('<a class="nav_arrow" id="next" href="#">next</a>'),
 		$screen = $('<div id="screen"></div>')
 			.append($prev, $next)
-			.hover(
-				function() { $slides.cycle('pause'); $prev.show(); $next.show(); }, 
-				function() { $prev.hide(); $next.hide(); $slides.cycle('resume'); }
-		),
+			.hover(function() { $slides.cycle('toggle'); $prev.toggle(); $next.toggle(); }),
 		$pager = $('<div id="pager"></div>').hover(
 			function() { $slides.cycle('pause'); $prev.show(); $next.show(); },
 			function() { $prev.hide(); $next.hide(); $slides.cycle('resume'); }
