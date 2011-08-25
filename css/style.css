@@ -1,0 +1,78 @@
+body {
+	background-color: #1b1a1b;
+}
+#frame {
+	width: 580px;
+	height: 520px;
+	background: url(../img/frame.jpg) no-repeat;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
+#screen {
+	width: 466px;
+	height: 349px;
+	margin-left: 57px;
+	margin-top: 52px;
+	/*overflow: hidden; */
+	position: relative;
+	padding: 0;
+}
+#slides {
+	margin: 0;
+	padding: 0;
+	height: 349px;
+}
+.nav_arrow {
+	width: 60px;
+	height: 60px;
+	position: absolute; /* We position them relative to the #screen */
+	top: 150px;
+	z-index: 9999; /* We need this because Cycle use absolute positioning for the slides */
+	text-indent: -9999px;
+	outline: none; /* To avoid ugly dotted rectangles */
+	background-repeat: no-repeat;
+	display: none; /* Not visible initially */
+}
+#prev {
+	left: 5px;
+	background-image: url(../img/prev.png);
+}
+#next {
+	right: 5px;
+	background-image: url(../img/next.png);
+}
+#pager {
+	width: 200px;
+	margin: 0px auto 0 auto;
+	padding-top: 10px;
+	text-align: center;
+}
+#pager a { 
+	border: 1px solid #ccc; 
+	background-color: #fc0; 
+	text-decoration: none; 
+	margin: 0 5px; 
+	padding: 3px 5px;
+}
+#pager a.activeSlide { 
+	background-color: #ea0
+}
+#pager a:focus { 
+	outline: none;
+}
+/* End of slideshow related CSS */
+#prjnotes a:link {
+	color: #0000ff;
+	text-decoration: none;
+}
+#prjnotes a:visited {
+	color: #ff00ff;
+	text-decoration: none;
+}
+#prjnotes a:hover {
+	text-decoration: underline;
+}
+#prjnotes a:active {
+	color: #ff0000;
+}
