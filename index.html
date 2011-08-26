@@ -5,21 +5,34 @@
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link href='http://fonts.googleapis.com/css?family=Coustard' rel='stylesheet' type='text/css'>
-	<style type="text/css">
-		*  { margin: 0; padding: 0;}
-	</style>
 	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
 	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
 	<link href="http://mgiulio.github.com/prjnotes/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		img {
+			float: left;
+			margin-right: 15px;
+			margin-bottom: 15px;
+		}
+	</style>
 </head>
 <body>
 <div id="page-wrap">
 	<h1>A Cycle Slideshow skinned like an iPad</h1>
-	<p><a href="#demo"><img src="http://mgiulio.altervista.org/wp-content/uploads/2011/05/sshot-ipad-slideshow-v1.0-tn.jpg" alt="ipad-slideshow v1.0 screenshot" title="ipad-slideshow v1.0 screenshot" width="300" height="238" class="alignleft size-full wp-image-265" /></a> 
+	<p>
+		<a href="#demo">
+			<img 
+				src="http://mgiulio.altervista.org/wp-content/uploads/2011/05/sshot-ipad-slideshow-v1.0-tn.jpg" 
+				alt="ipad-slideshow v1.0 screenshot" 
+				title="ipad-slideshow v1.0 screenshot" 
+				width="300" height="238" 
+				>
+		</a> 
 	<p>This project was inspired by the JavaScript slideshow demo published on <a href="http://designshack.co.uk" rel="nofollow">http://designshack.co.uk</a>. In the article the author shows how to implement an <a href="http://designshack.co.uk/articles/javascript/build-an-ipad-themed-image-slider-with-jquery">iPad-skinned image slider with jQuery</a>. In particular, he is using the <a href="http://designshack.co.uk/articles/javascript/build-an-ipad-themed-image-slider-with-jquery">Nivo Slider</a>.</p> 
 	<p>I really liked the demo and so I decided to remake a similar <a href="#demo">slideshow</a> but using the <a href="http://jquery.malsup.com/cycle/">Cycle jQuery plugin</a> by <a href="http://jquery.malsup.com/">Malsup</a>.</p> 
 	<p>Here are some quick notes about the implementation.</p> 
-	<h2 style="clear: left; margin-top: 80px;">Expected behaviour</h2> 
+	
+	<h2 style="clear: left;">Expected behaviour</h2> 
 	<p>A brief description of the interactions and behaviours provided by the slideshow user interface:</p> 
 	<ul> 
 		<li>Autoplay</li> 
