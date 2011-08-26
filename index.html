@@ -10,49 +10,7 @@
 	</style>
 	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
 	<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
-	<style type="text/css">
-		html {
-			background-color: #000;
-		}
-		body {
-			font-family: 'Coustard', serif;
-		}
-		#page-wrap {
-			width: 720px;
-			margin: 0 auto;
-			background-color: #fff;
-			border: 2px solid #999;
-			padding: 20px;
-			margin-top: 80px;
-		}
-		h1, h2 {
-			margin: 20px 0;
-			color: #d26262;
-		}
-		h1 {
-			text-shadow: 1px 3px 1px #000;
-		}
-		p {
-			line-height: 1.5;
-			margin: 1em 0;
-		}
-		a {
-			color: #ffa500;
-			text-decoration: none;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
-		a:visited {
-			color: #d67600;
-		}
-		a:active{
-			color: #ffff00;
-		}
-		ul {
-			margin-left: 3em;
-		}
-	</style>
+	<link href="https://raw.github.com/mgiulio/prjnotes/master/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="page-wrap">
@@ -61,7 +19,7 @@
 	<p>This project was inspired by the JavaScript slideshow demo published on <a href="http://designshack.co.uk" rel="nofollow">http://designshack.co.uk</a>. In the article the author shows how to implement an <a href="http://designshack.co.uk/articles/javascript/build-an-ipad-themed-image-slider-with-jquery">iPad-skinned image slider with jQuery</a>. In particular, he is using the <a href="http://designshack.co.uk/articles/javascript/build-an-ipad-themed-image-slider-with-jquery">Nivo Slider</a>.</p> 
 	<p>I really liked the demo and so I decided to remake a similar <a href="#demo">slideshow</a> but using the <a href="http://jquery.malsup.com/cycle/">Cycle jQuery plugin</a> by <a href="http://jquery.malsup.com/">Malsup</a>.</p> 
 	<p>Here are some quick notes about the implementation.</p> 
-	<h3 style="clear: left; margin-top: 80px;">Expected behaviour</h3> 
+	<h2 style="clear: left; margin-top: 80px;">Expected behaviour</h2> 
 	<p>A brief description of the interactions and behaviours provided by the slideshow user interface:</p> 
 	<ul> 
 		<li>Autoplay</li> 
@@ -74,7 +32,7 @@
 		<li>Use of a pager to provide &#8216;random access&#8217; to the slides(in contrast with the sequential access provided by prev/next buttons) and to display the number of slides and which one the user is watching.</li> 
 		<li>On hovering on the pager the behaviour is the same as when the user hovers on the slide area./li>
 	</ul> 
-	<h3>Graphics and software resources used</h3> 
+	<h2>Graphics and software resources used</h2> 
 	<p>The <a href="http://www.openclipart.org/detail/29785">iPad frame picture</a> was found on OpenClipArt, an archive of clip art that can be used for free for any use. This is a SVG resource so I edited it in Inkscape, added a floor reflection and exported it to a .jpg</p> 
 	<p>The prev/next navigation arrows were made from scratch in Inkscape and exported as .png.</p> 
 	<p>The slides are from my <a href="http://mgiulio.altervista.org/?p=175">ScrnShot account.</a></p> 
@@ -84,7 +42,7 @@
 		<li>jQuery 1.5.2</li> 
 		<li>Cycle latest version from GitHub</li> 
 	</ul> 
-	<h3>Markup structure and JavaScript</h3> 
+	<h2>Markup structure and JavaScript</h2> 
 	<p>This is the slideshow markup on the page:</p> 
 	<pre class="brush: xml; title: ;" title=""> 
 &lt;div id=&quot;slides&quot;&gt;
@@ -144,22 +102,22 @@
 	});
 	</pre> 
 	<p>The use of the &#8216;scrollHz&#8217; value for the fx option give us a nice sliding animation with a&#8217; natural behaviour&#8217;: when accessing a slide that in the slideshow order comes after the current one(with the next button or with the pager) Cycle will use a left scrolling, and when accessing a previous slide it will use a right scrolling.</p> 
-	<h3>Browser tested</h3> 
+	<h2>Browser tested</h2> 
 	<ul> 
 		<li>Firefox: 3.6.x, 4</li> 
 		<li>Chrome: 11</li> 
 		<li>Opera: 10.63, 11.10</li> 
 		<li>MSIE: 9</li> 
 	</ul> 
-	<h3>Future Work</h3> 
+	<h2>Future Work</h2> 
 	<ul> 
 		<li>Test IE &lt; 9</li> 
 		<li>Misc improvements and new features&#8230;maybe.</li> 
 	</ul> 
-	<h3><a name="demo">Demo and source</a></h3> 
+	<h2><!-- <a name="demo"> -->Demo and source<!-- </a> --></h2> 
 	<ul> 
-		<li><a href="http://mgiulio.altervista.org/wp-content/demo/ipad-slideshow/">Demo</a></li> 
-		<li><a href="https://github.com/mgiulio/ipad-slideshow">Source on GitHub</a></li> 
+		<li><a href="http://mgiulio.github.com/ipad-slideshow/demo.html/">Demo</a></li> 
+		<li><a href="https://github.com/mgiulio/ipad-slideshow">Source</a></li> 
 	</ul> 
 </div> <!-- #page-wrap -->
 
