@@ -55,65 +55,66 @@
 	</style>
 </head>
 <body>
-	<div id="page-wrap">
-		<h2>A Cycle Slideshow skinned like an iPad</h2>			<p><a href="#demo"><img src="http://mgiulio.altervista.org/wp-content/uploads/2011/05/sshot-ipad-slideshow-v1.0-tn.jpg" alt="ipad-slideshow v1.0 screenshot" title="ipad-slideshow v1.0 screenshot" width="300" height="238" class="alignleft size-full wp-image-265" /></a> 
-<p>This project was inspired by the JavaScript slideshow demo published on <a href="http://designshack.co.uk" rel="nofollow">http://designshack.co.uk</a>. In the article the author shows how to implement an <a href="http://designshack.co.uk/articles/javascript/build-an-ipad-themed-image-slider-with-jquery">iPad-skinned image slider with jQuery</a>. In particular, he is using the <a href="http://designshack.co.uk/articles/javascript/build-an-ipad-themed-image-slider-with-jquery">Nivo Slider</a>.</p> 
-<p>I really liked the demo and so I decided to remake a similar <a href="#demo">slideshow</a> but using the <a href="http://jquery.malsup.com/cycle/">Cycle jQuery plugin</a> by <a href="http://jquery.malsup.com/">Malsup</a>.</p> 
-<p>Here are some quick notes about the implementation.</p> 
-<h3 style="clear: left; margin-top: 80px;">Expected behaviour</h3> 
-<p>A brief description of the interactions and behaviours provided by the slideshow user interface:</p> 
-<ul> 
-<li>Autoplay</li> 
-<li>After the last slide go back to the first one</li> 
-<li>When mouse pointer enters the slide area, pause and show prev/next buttons</li> 
-<li>When mouse exits slide area hide prev/next buttons and resume the slideshow</li> 
-<li>The effect used for a slide transition is a scrolling</li> 
-<li>When user clicks on the prev button use a scroll right animation</li> 
-<li>When user clicks on the next button use a scroll left animation</li> 
-<li>Use of a pager to provide &#8216;random access&#8217; to the slides(in contrast with the sequential access provided by prev/next buttons) and to display the number of slides and which one the user is watching.</li> 
-<li>On hovering on the pager the behaviour is the same as when the user hovers on the slide area./li>
-</ul> 
-<h3>Graphics and software resources used</h3> 
-<p>The <a href="http://www.openclipart.org/detail/29785">iPad frame picture</a> was found on OpenClipArt, an archive of clip art that can be used for free for any use. This is a SVG resource so I edited it in Inkscape, added a floor reflection and exported it to a .jpg</p> 
-<p>The prev/next navigation arrows were made from scratch in Inkscape and exported as .png.</p> 
-<p>The slides are from my <a href="http://mgiulio.altervista.org/?p=175">ScrnShot account.</a></p> 
-<p>About the software:</p> 
-<ul> 
-<li><a href="http://developer.yahoo.com/yui/3/">YUI</a> Reset and Base style sheets.
-<li>jQuery 1.5.2</li> 
-<li>Cycle latest version from GitHub</li> 
-</ul> 
-<h3>Markup structure and JavaScript</h3> 
-<p>This is the slideshow markup on the page:</p> 
-<pre class="brush: xml; title: ;" title=""> 
+<div id="page-wrap">
+	<h1>A Cycle Slideshow skinned like an iPad</h1>
+	<p><a href="#demo"><img src="http://mgiulio.altervista.org/wp-content/uploads/2011/05/sshot-ipad-slideshow-v1.0-tn.jpg" alt="ipad-slideshow v1.0 screenshot" title="ipad-slideshow v1.0 screenshot" width="300" height="238" class="alignleft size-full wp-image-265" /></a> 
+	<p>This project was inspired by the JavaScript slideshow demo published on <a href="http://designshack.co.uk" rel="nofollow">http://designshack.co.uk</a>. In the article the author shows how to implement an <a href="http://designshack.co.uk/articles/javascript/build-an-ipad-themed-image-slider-with-jquery">iPad-skinned image slider with jQuery</a>. In particular, he is using the <a href="http://designshack.co.uk/articles/javascript/build-an-ipad-themed-image-slider-with-jquery">Nivo Slider</a>.</p> 
+	<p>I really liked the demo and so I decided to remake a similar <a href="#demo">slideshow</a> but using the <a href="http://jquery.malsup.com/cycle/">Cycle jQuery plugin</a> by <a href="http://jquery.malsup.com/">Malsup</a>.</p> 
+	<p>Here are some quick notes about the implementation.</p> 
+	<h3 style="clear: left; margin-top: 80px;">Expected behaviour</h3> 
+	<p>A brief description of the interactions and behaviours provided by the slideshow user interface:</p> 
+	<ul> 
+		<li>Autoplay</li> 
+		<li>After the last slide go back to the first one</li> 
+		<li>When mouse pointer enters the slide area, pause and show prev/next buttons</li> 
+		<li>When mouse exits slide area hide prev/next buttons and resume the slideshow</li> 
+		<li>The effect used for a slide transition is a scrolling</li> 
+		<li>When user clicks on the prev button use a scroll right animation</li> 
+		<li>When user clicks on the next button use a scroll left animation</li> 
+		<li>Use of a pager to provide &#8216;random access&#8217; to the slides(in contrast with the sequential access provided by prev/next buttons) and to display the number of slides and which one the user is watching.</li> 
+		<li>On hovering on the pager the behaviour is the same as when the user hovers on the slide area./li>
+	</ul> 
+	<h3>Graphics and software resources used</h3> 
+	<p>The <a href="http://www.openclipart.org/detail/29785">iPad frame picture</a> was found on OpenClipArt, an archive of clip art that can be used for free for any use. This is a SVG resource so I edited it in Inkscape, added a floor reflection and exported it to a .jpg</p> 
+	<p>The prev/next navigation arrows were made from scratch in Inkscape and exported as .png.</p> 
+	<p>The slides are from my <a href="http://mgiulio.altervista.org/?p=175">ScrnShot account.</a></p> 
+	<p>About the software:</p> 
+	<ul> 
+		<li><a href="http://developer.yahoo.com/yui/3/">YUI</a> Reset and Base style sheets.
+		<li>jQuery 1.5.2</li> 
+		<li>Cycle latest version from GitHub</li> 
+	</ul> 
+	<h3>Markup structure and JavaScript</h3> 
+	<p>This is the slideshow markup on the page:</p> 
+	<pre class="brush: xml; title: ;" title=""> 
 &lt;div id=&quot;slides&quot;&gt;
+	&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/282517&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/282517&quot;&gt;&lt;img</a> src=&quot;img/slide-1.jpg&quot;&gt;&lt;/a&gt;
+	&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/283489&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/283489&quot;&gt;&lt;img</a> src=&quot;img/slide-2.jpg&quot;&gt;&lt;/a&gt;
+	&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/283317&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/283317&quot;&gt;&lt;img</a> src=&quot;img/slide-3.jpg&quot;&gt;&lt;/a&gt;
+	&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/285898&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/285898&quot;&gt;&lt;img</a> src=&quot;img/slide-4.jpg&quot;&gt;&lt;/a&gt;
+	&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/284145&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/284145&quot;&gt;&lt;img</a> src=&quot;img/slide-5.jpg&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+	</pre> 
+	<p>After the page is fully loaded the script augment this structure wrapping it in this way:</p> 
+	<pre class="brush: xml; title: ;" title=""> 
+&lt;div id=&quot;frame&quot;&gt;
+&lt;div id=&quot;screen&quot;&gt;
+	&lt;a class=&quot;nav_arrow&quot; id=&quot;prev&quot; href=&quot;#&quot; style=&quot;display: none; &quot;&gt;prev&lt;/a&gt;
+	&lt;a class=&quot;nav_arrow&quot; id=&quot;next&quot; href=&quot;#&quot; style=&quot;display: none; &quot;&gt;next&lt;/a&gt;
+	&lt;div id=&quot;slides&quot;&gt;
 		&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/282517&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/282517&quot;&gt;&lt;img</a> src=&quot;img/slide-1.jpg&quot;&gt;&lt;/a&gt;
 		&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/283489&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/283489&quot;&gt;&lt;img</a> src=&quot;img/slide-2.jpg&quot;&gt;&lt;/a&gt;
 		&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/283317&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/283317&quot;&gt;&lt;img</a> src=&quot;img/slide-3.jpg&quot;&gt;&lt;/a&gt;
 		&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/285898&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/285898&quot;&gt;&lt;img</a> src=&quot;img/slide-4.jpg&quot;&gt;&lt;/a&gt;
 		&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/284145&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/284145&quot;&gt;&lt;img</a> src=&quot;img/slide-5.jpg&quot;&gt;&lt;/a&gt;
-&lt;/div&gt;
-</pre> 
-<p>After the page is fully loaded the script augment this structure wrapping it in this way:</p> 
-<pre class="brush: xml; title: ;" title=""> 
-&lt;div id=&quot;frame&quot;&gt;
-	&lt;div id=&quot;screen&quot;&gt;
-		&lt;a class=&quot;nav_arrow&quot; id=&quot;prev&quot; href=&quot;#&quot; style=&quot;display: none; &quot;&gt;prev&lt;/a&gt;
-		&lt;a class=&quot;nav_arrow&quot; id=&quot;next&quot; href=&quot;#&quot; style=&quot;display: none; &quot;&gt;next&lt;/a&gt;
-		&lt;div id=&quot;slides&quot;&gt;
-			&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/282517&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/282517&quot;&gt;&lt;img</a> src=&quot;img/slide-1.jpg&quot;&gt;&lt;/a&gt;
-			&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/283489&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/283489&quot;&gt;&lt;img</a> src=&quot;img/slide-2.jpg&quot;&gt;&lt;/a&gt;
-			&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/283317&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/283317&quot;&gt;&lt;img</a> src=&quot;img/slide-3.jpg&quot;&gt;&lt;/a&gt;
-			&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/285898&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/285898&quot;&gt;&lt;img</a> src=&quot;img/slide-4.jpg&quot;&gt;&lt;/a&gt;
-			&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/284145&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/284145&quot;&gt;&lt;img</a> src=&quot;img/slide-5.jpg&quot;&gt;&lt;/a&gt;
-		&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;div id=&quot;pager&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-</pre> 
-<p>This markup transformation is done with the following code:</p> 
-<pre class="brush: jscript; title: ;" title=""> 
-var
+&lt;div id=&quot;pager&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+	</pre> 
+	<p>This markup transformation is done with the following code:</p> 
+	<pre class="brush: jscript; title: ;" title=""> 
+	var
 		$slides = $('#slides'),
 		$frame = $('&lt;div id=&quot;frame&quot;&gt;&lt;/div&gt;'),
 		$prev = $('&lt;a class=&quot;nav_arrow&quot; id=&quot;prev&quot; href=&quot;#&quot;&gt;prev&lt;/a&gt;'),
@@ -125,15 +126,15 @@ var
 			function() { $slides.cycle('toggle'); $prev.toggle(); $next.toggle(); }
 		)
 	; 
- 
+
 	$slides.after($frame);
 	$frame.append($screen, $pager);
 	$screen.append($slides);
-</pre> 
-<p>In the previous snippets appears also the event handling code. Using the Cycle toggle command and the jQuery .toggle() method we can implement the required hovering behaviours.</p> 
-<p>After this we call the Cycle plugin:</p> 
-<pre class="brush: jscript; title: ;" title=""> 
-$slides.cycle({
+	</pre> 
+	<p>In the previous snippets appears also the event handling code. Using the Cycle toggle command and the jQuery .toggle() method we can implement the required hovering behaviours.</p> 
+	<p>After this we call the Cycle plugin:</p> 
+	<pre class="brush: jscript; title: ;" title=""> 
+	$slides.cycle({
 		fx: 'scrollHorz',
 		timeout: 4000,
 		speed: 500,
@@ -141,35 +142,35 @@ $slides.cycle({
 		next: '#next',
 		pager: '#pager'
 	});
-</pre> 
-<p>The use of the &#8216;scrollHz&#8217; value for the fx option give us a nice sliding animation with a&#8217; natural behaviour&#8217;: when accessing a slide that in the slideshow order comes after the current one(with the next button or with the pager) Cycle will use a left scrolling, and when accessing a previous slide it will use a right scrolling.</p> 
-<h3>Browser tested</h3> 
-<ul> 
-<li>Firefox: 3.6.x, 4</li> 
-<li>Chrome: 11</li> 
-<li>Opera: 10.63, 11.10</li> 
-<li>MSIE: 9</li> 
-</ul> 
-<h3>Future Work</h3> 
-<ul> 
-<li>Test IE &lt; 9</li> 
-<li>Misc improvements and new features&#8230;maybe.</li> 
-</ul> 
-<h3><a name="demo">Demo and source</a></h3> 
-<ul> 
-<li><a href="http://mgiulio.altervista.org/wp-content/demo/ipad-slideshow/">Demo</a></li> 
-<li><a href="https://github.com/mgiulio/ipad-slideshow">Source on GitHub</a></li> 
-</ul> 
+	</pre> 
+	<p>The use of the &#8216;scrollHz&#8217; value for the fx option give us a nice sliding animation with a&#8217; natural behaviour&#8217;: when accessing a slide that in the slideshow order comes after the current one(with the next button or with the pager) Cycle will use a left scrolling, and when accessing a previous slide it will use a right scrolling.</p> 
+	<h3>Browser tested</h3> 
+	<ul> 
+		<li>Firefox: 3.6.x, 4</li> 
+		<li>Chrome: 11</li> 
+		<li>Opera: 10.63, 11.10</li> 
+		<li>MSIE: 9</li> 
+	</ul> 
+	<h3>Future Work</h3> 
+	<ul> 
+		<li>Test IE &lt; 9</li> 
+		<li>Misc improvements and new features&#8230;maybe.</li> 
+	</ul> 
+	<h3><a name="demo">Demo and source</a></h3> 
+	<ul> 
+		<li><a href="http://mgiulio.altervista.org/wp-content/demo/ipad-slideshow/">Demo</a></li> 
+		<li><a href="https://github.com/mgiulio/ipad-slideshow">Source on GitHub</a></li> 
+	</ul> 
+</div> <!-- #page-wrap -->
 
-	</div>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script>!window.jQuery && document.write('<script src="http://code.jquery.com/jquery-1.6.2.min.js"><\/script>');</script>
-	<script src="jquery.wallpaper.js"></script>
-	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
-	<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js"></script>
-	<script>
-		SyntaxHighlighter.all();
-	</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src="http://code.jquery.com/jquery-1.6.2.min.js"><\/script>');</script>
+<script src="jquery.wallpaper.js"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js"></script>
+<script>
+	SyntaxHighlighter.all();
+</script>
+
 </body>
 </html>
