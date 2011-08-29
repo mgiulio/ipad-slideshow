@@ -67,21 +67,21 @@
 </div>
 ]]></script>
 	<p>After the page is fully loaded the script augment this structure wrapping it in this way:</p> 
-	<script type="syntaxhighlighter" class="brush: js"><![CDATA[
-&lt;div id=&quot;frame&quot;&gt;
-&lt;div id=&quot;screen&quot;&gt;
-	&lt;a class=&quot;nav_arrow&quot; id=&quot;prev&quot; href=&quot;#&quot; style=&quot;display: none; &quot;&gt;prev&lt;/a&gt;
-	&lt;a class=&quot;nav_arrow&quot; id=&quot;next&quot; href=&quot;#&quot; style=&quot;display: none; &quot;&gt;next&lt;/a&gt;
-	&lt;div id=&quot;slides&quot;&gt;
-		&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/282517&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/282517&quot;&gt;&lt;img</a> src=&quot;img/slide-1.jpg&quot;&gt;&lt;/a&gt;
-		&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/283489&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/283489&quot;&gt;&lt;img</a> src=&quot;img/slide-2.jpg&quot;&gt;&lt;/a&gt;
-		&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/283317&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/283317&quot;&gt;&lt;img</a> src=&quot;img/slide-3.jpg&quot;&gt;&lt;/a&gt;
-		&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/285898&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/285898&quot;&gt;&lt;img</a> src=&quot;img/slide-4.jpg&quot;&gt;&lt;/a&gt;
-		&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/284145&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/284145&quot;&gt;&lt;img</a> src=&quot;img/slide-5.jpg&quot;&gt;&lt;/a&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;pager&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+	<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<div id="frame">
+	<div id="screen">
+		<a class="nav_arrow" id="prev" href="#" style="display: none; ">prev</a>
+    	<a class="nav_arrow" id="next" href="#" style="display: none; ">next</a>
+		<div id="slides">
+			<a href="http://www.scrnshots.com/users/giuliom/screenshots/282517"><img src="img/slide-1.jpg"></a>
+			<a href="http://www.scrnshots.com/users/giuliom/screenshots/283489"><img src="img/slide-2.jpg"></a>
+			<a href="http://www.scrnshots.com/users/giuliom/screenshots/283317"><img src="img/slide-3.jpg"></a>
+			<a href="http://www.scrnshots.com/users/giuliom/screenshots/285898"><img src="img/slide-4.jpg"></a>
+			<a href="http://www.scrnshots.com/users/giuliom/screenshots/284145"><img src="img/slide-5.jpg"></a>
+		</div>
+	</div>
+	<div id="pager"></div>
+</div
 ]]></script>
 	<p>This markup transformation is done with the following code:</p> 
 	<script type="syntaxhighlighter" class="brush: js"><![CDATA[
