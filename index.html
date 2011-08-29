@@ -57,7 +57,7 @@
 	</ul> 
 	<h2>Markup structure and JavaScript</h2> 
 	<p>This is the slideshow markup on the page:</p> 
-	<pre class="brush: xml; title: ;" title=""> 
+	<script type="syntaxhighlighter" class="brush: js"><![CDATA[
 &lt;div id=&quot;slides&quot;&gt;
 	&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/282517&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/282517&quot;&gt;&lt;img</a> src=&quot;img/slide-1.jpg&quot;&gt;&lt;/a&gt;
 	&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/283489&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/283489&quot;&gt;&lt;img</a> src=&quot;img/slide-2.jpg&quot;&gt;&lt;/a&gt;
@@ -65,9 +65,9 @@
 	&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/285898&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/285898&quot;&gt;&lt;img</a> src=&quot;img/slide-4.jpg&quot;&gt;&lt;/a&gt;
 	&lt;a href=&quot;<a href="http://www.scrnshots.com/users/giuliom/screenshots/284145&quot;&gt;&lt;img" rel="nofollow">http://www.scrnshots.com/users/giuliom/screenshots/284145&quot;&gt;&lt;img</a> src=&quot;img/slide-5.jpg&quot;&gt;&lt;/a&gt;
 &lt;/div&gt;
-	</pre> 
+]]></script>
 	<p>After the page is fully loaded the script augment this structure wrapping it in this way:</p> 
-	<pre class="brush: xml; title: ;" title=""> 
+	<script type="syntaxhighlighter" class="brush: js"><![CDATA[
 &lt;div id=&quot;frame&quot;&gt;
 &lt;div id=&quot;screen&quot;&gt;
 	&lt;a class=&quot;nav_arrow&quot; id=&quot;prev&quot; href=&quot;#&quot; style=&quot;display: none; &quot;&gt;prev&lt;/a&gt;
@@ -82,9 +82,9 @@
 &lt;/div&gt;
 &lt;div id=&quot;pager&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-	</pre> 
+]]></script>
 	<p>This markup transformation is done with the following code:</p> 
-	<pre class="brush: jscript; title: ;" title=""> 
+	<script type="syntaxhighlighter" class="brush: js"><![CDATA[
 	var
 		$slides = $('#slides'),
 		$frame = $('&lt;div id=&quot;frame&quot;&gt;&lt;/div&gt;'),
@@ -101,10 +101,10 @@
 	$slides.after($frame);
 	$frame.append($screen, $pager);
 	$screen.append($slides);
-	</pre> 
-	<p>In the previous snippets appears also the event handling code. Using the Cycle toggle command and the jQuery .toggle() method we can implement the required hovering behaviours.</p> 
+]]></script>
+	<p>In the previous snippets appear also the event handling code. Using the Cycle toggle command and the jQuery .toggle() method we can implement the required hovering behaviours.</p> 
 	<p>After this we call the Cycle plugin:</p> 
-	<pre class="brush: jscript; title: ;" title=""> 
+	<script type="syntaxhighlighter" class="brush: js"><![CDATA[
 	$slides.cycle({
 		fx: 'scrollHorz',
 		timeout: 4000,
@@ -113,7 +113,7 @@
 		next: '#next',
 		pager: '#pager'
 	});
-	</pre> 
+	]]></script>
 	<p>The use of the &#8216;scrollHz&#8217; value for the fx option give us a nice sliding animation with a&#8217; natural behaviour&#8217;: when accessing a slide that in the slideshow order comes after the current one(with the next button or with the pager) Cycle will use a left scrolling, and when accessing a previous slide it will use a right scrolling.</p> 
 	<h2>Browser tested</h2> 
 	<ul> 
